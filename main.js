@@ -32,15 +32,9 @@ function activateMenuAtCurrentSection(section) {
 }
 
 function showNavOnScroll() {
-   if (scrollY > 0) {
-      document.getElementById('navigation').style
-      .backgroundColor = 'hsl(var(--hue), 100%, 26%)';
-   }
-      else {
-         document.getElementById('navigation').style.backgroundColor = ''
-      }
-   }
-
+   const menu = document.querySelector('#navigation');  
+   menu.classList.toggle('scroll', scrollY > 0)
+}
 
 function showBackToTopButtonOnScroll() {
    if (scrollY > 400) {
@@ -72,17 +66,3 @@ ScrollReveal({
    #about, 
    #about header, 
    #about .content`)
-
-
-      //document.getElementById('backToTopButton').style.opacity = '1'
-      //document.getElementById('backToTopButton').style.visibility = 'visible'
-      //document.getElementById('backToTopButton').style.transform = 'translateY(0)'
-      //document.getElementById('backToTopButton').style.position = 'fixed'
-      //document.getElementById('backToTopButton').style.bottom = '1rem'
-      //document.getElementById('backToTopButton').style.right = '2.5rem'
-      //document.getElementById('backToTopButton').style.transform = 'translateY(100%)'
-      //document.getElementById('backToTopButton').style.transition = '200ms'
-      
-      //opacity: 1;
-      //visibility: visible;
-      //transform: translateY(0);
